@@ -1,6 +1,10 @@
 // import { heroes } from './data/heroes';
 
-import { heroes } from "./data/heroes"
+import heroes, { owners } from "../data/heroes";
+
+// console.log(owners);
+
+
 
 // const getHeroeById = (id) => {
 
@@ -13,16 +17,17 @@ import { heroes } from "./data/heroes"
 //     });
 // }
 
-const getHeroeById = (id) => {
+export const getHeroeById = (id) => {
     
     return heroes.find( /*esto es el argumento de la funcion --> */ ( heroe ) =>  heroe.id === id );
 }
 
-console.log( getHeroeById(2) )
+// console.log( getHeroeById(2) )
 
-const getHeroeByOwner = (owner) => {
+export const getHeroeByOwner = (owner) => {
     
     return heroes.filter( /*esto es el argumento de la funcion --> */ ( heroe ) =>  heroe.owner === owner );
 }
 
-console.log( getHeroeByOwner('DC') );
+// console.log( getHeroeByOwner('DC') );
+
